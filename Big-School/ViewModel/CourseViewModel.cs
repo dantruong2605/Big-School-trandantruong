@@ -11,6 +11,8 @@ namespace Big_School.ViewModel
         [Require]
         public string Place { get; set; }
         public string Date { get; set; }
+        [Require]
+        [ValidTime]
         public string Time { get; set; }
         public byte Category { get; set; }
         public IEnumerable<Category> Categories { get; set; }

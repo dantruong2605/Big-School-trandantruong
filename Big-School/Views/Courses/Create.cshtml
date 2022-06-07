@@ -8,7 +8,7 @@
 <h2>Create</h2>
 <form>
     
-    
+        @Html.AntiForgeryToken();
         <div class="from-group">
             @Html.LabelFor(m => m.Place)
             @Html.TextBoxFor(m => m.Place, new { @class = "from-control" })
@@ -41,4 +41,8 @@
     <div class="form-group"></div>
 </form>
 }
+@section scripts
+{
+    @Scripts.Render("~/bundles/jqueryval");
+    }
 
